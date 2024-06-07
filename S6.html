@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S6</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         /* Style général */
         body {
@@ -158,6 +160,25 @@ nav ul li a {
             max-width: 800px; /* Increase the max-width */
             max-height: 400px; /* Decrease the height */
         }
+
+        #scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    background-color: violet;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#scrollTopBtn:hover {
+    background-color: darkviolet;
+}
+
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -193,6 +214,9 @@ nav ul li a {
         <div class="chart-title">Washnohom les modules li jawek bzef s3ab s6</div>
         <canvas id="difficultModulesChart" class="bar-chart"></canvas>
     </div>
+
+    <button id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+
 
     <script>
         const favoriteModulesData = {
@@ -294,6 +318,23 @@ nav ul li a {
         var menu = document.querySelector('nav ul');
         menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
     }
+
+    // Afficher le bouton lorsque l'utilisateur défile vers le bas de 20px
+window.onscroll = function() {
+    var scrollTopBtn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+};
+
+// Revenir en haut de la page lorsque le bouton est cliqué
+document.getElementById("scrollTopBtn").onclick = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+};
+
     </script>
 </body>
 </html>
