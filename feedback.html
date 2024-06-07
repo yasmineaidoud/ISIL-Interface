@@ -190,11 +190,23 @@ nav ul li a {
     margin-right: 10px;
 }
 
-
 .student-info h3 {
     color: gray;
     font-size: 1em;
     margin: 0;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .paragraph {
+        width: calc(50% - 20px); /* 50% width for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .paragraph {
+        width: calc(100% - 20px); /* 100% width for small screens */
+    }
 }
 
     </style>
