@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advices</title>
+    <style>
+        /* Style général */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Pour centrer le contenu verticalement */
+        }
+
+        /* Style de la barre de navigation */
+        /* Style de la barre de navigation */
+nav {
+    background-color: violet;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 40px); /* Largeur de la page moins 40px de padding */
+    margin: 0 20px; /* Ajout d'un peu d'espace sur les côtés */
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Pour permettre le passage à la ligne des éléments lorsque l'espace est insuffisant */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Augmenter l'espacement entre les liens */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+        /* Style de la photo et du texte */
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile span {
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* Style du titre principal */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px; /* Espacement supplémentaire après la barre de navigation */
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #333;
+            margin-top: 0px;
+            margin-bottom: 0; /* Réinitialiser la marge par défaut */
+        }
+
+         /* Style pour le diagramme circulaire */
+         #chart-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px; /* Ajout d'un peu d'espace sous le diagramme */
+        }
+
+        /* Style pour les reponses des etudiants */
+
+       /* Style pour le nouveau titre et les paragraphes */
+#second-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#second-section h2 {
+    color: #333;
+}
+
+.paragraphs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.paragraph {
+    width: calc(33.33% - 20px); /* 33.33% de largeur moins l'espace entre les éléments */
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.student-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.student-info img {
+    width: 40px; /* Réduire la largeur */
+    height: 40px; /* Réduire la hauteur */
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.student-info h3 {
+    color: gray;
+    font-size: 1em;
+    margin: 0;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="profile">
+            <img src="yasmine.jpg" alt="Yasmine Aidoud">
+            <span>Yasmine Aidoud</span>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="S5.html">S5</a></li>
+                <li><a href="S6.html">S6</a></li>
+                <li><a href="advice.html">advices</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>L3 ISIL 2023/2024</h1>
+    </header>
+
+    <!-- Nouveau titre et paragraphes -->
+<div id="second-section">
+    <h2>any advice t9der tmadha li rahom rayhine y9raw isil l'année prochaine</h2>
+    <div class="paragraphs-container">
+
+        
+ <!-- Paragraphe 1 -->
+ <div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>a9raw tdo </p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Essaye f sif tabdaw tetl3lmo kifh tkhdmo bien les sites bach f l3 matjikimch bzef compliqué et bon courage </p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>a9raw brk</p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>al9a stage bekri hawess binome intik w mchi hmar/hmara</p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Ya kho easy bzzf b t7rach tl3 13 o 12 de moyenne brk pfe t3k ebdah bkri hada mkn.</p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Diroha w matkhafoch</p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>A9raw m lwl, mchi tkhlo le dernier mois t9raw klch, surtout S5, fiha 7fada bzaf, mais à la fin jib 7a9ek (13 jibha easily) w s6 red balek m se2 (surtout les sémaphores) </p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Mtdich gae w9tek lel pfe a9raaa les modules lokhrin mtkhlihomch la dernier min</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Concentrez sur vos projets, vous allez apprendre beaucoup de choses et n'abandonne pas vos modules psq tkdro tleo facilement </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Essayez dès début de trouver une entreprise pour votre projet de fin d'études</p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Ebdaw hwsso stage w binome 3el bekri w mdirohch binome m3a shabkom f pfe en plus ma termouch lem 3ela les modules lokhrin f s6 w s5 t9dro tedo bien facilment so ghir e9raw fih bch tkono alise f s6</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Fel s6 essayez de ne pas se concentrer qu'avec le projet e9raw les modules aussi homa sa7</p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>A9raw development web + back end BCH l3am ljay jikom shla f pfe diro application. Bonne vacances Rabi ywf9kom ❤️</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Soyez à jour pcq c’est chargé sinon le reste te9ra bien jib bien </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Matkhmoch aela wsh ysihlkom master psk les 2 spes aendhom le meme master ou ten ida aela ida fiha pratique psk y a des trucs matstnach hta win t9rahom bech tt3lmhom khemo, ou ten madiroch l rohkom la pression bzf and ten c’est locaz bech tl3o votre moyenne de licence psk master c’est la moyenne des 3 années so diro hsabkom and GOOD LUCK</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>اتعلم تخدم سيت فالصيف و اقرى مليح gl احضر tds و حاول طلع s5 مليح و حوس على سطاج على البكري و خير مليح بينوم تاعك</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Take it easy , 7awsou 3la encadrant f s5 psq ts7a9ou encadrant intern et seyou ebdaw pfe f s5 bch tivitiw la pression s6 w e9raw b1 gl psq ts7a9ouha fel mémoire</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Nadmo wa9tkom brk w l3am iji easy</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Tala3 bien semestre lowel bach tkon mehani avec PFE takhedmo bien et f PFE w profiter maximum m’en occasion dyal PFE pcq pttr seule opportunité li rah tchof fiha pratique sah li jamais rah tchofi f université sinon les théories marahch yahrab </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>U made the right choice by choosing Isil, tl3 l S5 bien 9ed mat9der, o el S6 concentre toi sur le projet </p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>isil je l'a voit une spécialité li twerilek l'informatique de façon large et mm les domaines li endhom relations surtt l'utilisation de l'informatique des entreprises </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Préparez vous pendant l'été assisté au cours faites les exercices surtt génie logiciel et système d'exploitation et pratiquez a la maison (apprenez un langage surtt JavaScript et le backend c très important </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Ida rak 7ayeb tweli “informaticien” wela “ingénieur” dir isil mdrr</p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>C’est le mêmes master mea (SI),don’t worry sahla aela la L2,T9raw la veille jibo l3am, et cassez vous mn dzayer le plus tôt possible.</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>S6 yjii m3a rmdan 😥</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>التخصص هذا ما يتعبش بزاف تقدر حتى تماجوري فيه نظم وقتك برك وما تخليش كلش يتراكم عليك حتى دقيقة اللخرة </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>A9rw l les 2 semestre matwsloch rohekom ll rattrapage  car cest pas difficile pour valider les 2 semestres et pout le pfe matmdoloch fo9 9imto w maykhle3komch car c'est rien de wow</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Ma tforsich bzf 3la l'9raya ta3 la fac et3alm wahdk w ekbdm un très bon projet </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Lzm twdjdou mel dok pour le stage et thawehes entreprise mliha. et lzm thder les TD BRK apr t9der tslkha ou Ida Kima f PAW (ha dirlkom 3la les framework ) had sif at3lam whed BCH tkhdmo bih mem pour le stage </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>First thing chofo les modules o wsh thbo ntoma bah tkhayro la spécialité li y9olko isil sahla n9olk no mochi sahla f S1 knt sahla par rapport T3 si après deuxième semestre WLAt isil s3iiiba d'ailleurs chofo les notes t3rfo and isil fiha la pression les projet bzzf. Ki tkon isil conseil ysiyi jib très bien f S1 bah tkon alaise f S2 o m3a memoire. And a9raw les modules as culture générale Machi bah jibo note o khls and good luck </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p> Concernant le S5 soyez juste a jour fles td et pour le s6 a9raw ma teklouch ghir 3la pfe et concernanat pfe bdaweh bkrii le memoire dyalkoum akhdmouh mli7 parce que houwa sahh Et fhad les vacances at3lmou des framework frontend et backend (pour s5 et s6) et bon courage kouleshh yjouzz🎓</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Concentré sur la pratique et la théorie </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Ida thabo web dev w coding ok psq rah tkon andkom envie tat3o les méthodes de raisonnement w rah tat7mso tjr bch tdevlopaw f domaine donc rah thbo t9raw sécurité w had lafays like rah ybaolkom s3ab mais tt7msolhom malgr s3ab w tdiro fihom des efforts donc maybanolkomch legya sinon ida mrahch thabo domaine akhtikom isil sah sahla bsah thab li yhabha </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>5yer les modules 3la 7sab wsh t7ab machi 3la 7sab chkoun sahel , 5ater ila t7ab 7aja dirha dirha yalokan wa3ra , good luck to everyone </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>A9raw mlih, 7ato rasskom fel 9raya, rako f la phase li wine lazem trefdo la base f l'informatique, même si ma9ritosh mlih L1 et L2 , wlh ghir L3 ISIL ha t3awnek bash terfed rohek w tet3alem bzeff 3fayess, W tala3 l morale ki tchof les efforts taek marahosh batel</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>1-Machii lazem tkunu à jours besh jibu mli7. 2-s5 ra7 yekun bzzf Sahel w te9edro tmajoriw b 15 facilement. 3 - en tant que ra7 yekun Sahel S5 donc vaut mieux diru (stage pfe) f s5 psq f s6 ra7 yekun remdan w jikum bzzff la charge m3a lakharr.</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>KHYRO BINOME T3 PFE A L'AVANCE W A3RFO WIN DIRO STAGE</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Do your BEST f S5. S6 c’est plus court mais plus compliqué w zid mea le PFE..</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Work hard, trust the process w majibouhach ghir mouloudia</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Essayez de profiter du temps le maximum et de vous développer en programmation par faire des formations des petits projets et surtout choisissez bien votre binôme. Bon courage ❤️ </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Un conseil fel projet ta3 s6 abdawh bkri w avansiw fih bch ki yl79o les examens tkono kmlto l projet wtrkzo ghir 3la les examens psk rahom même coefficients m3a l projet wmtdiroch confiance f délai li ymdoholkom capable dernier minute y3wdo ybdlo délai omb3d twlo f la pression </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>je vous conseille d'éviter la veille car c'est une spécialité facile (tjibo fiha +14 facilement) mais elle est extrêmement chargée donc il faut se préparer à l'avance + roho ISIL t9drolha khir m SI a la fin andkm classement wahed donc faut choisir intelligemment spécialité li tclassiw fiha khir ( pour moi c'est ISIL après kol wahed ychof ela hsabo) et teklo ela rabi w rabi ywefe9kom</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Ykounou à jour n’absentez pas parce que hedou des points rayhin tesha9ouhom après et a9raw keml les modules </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Please don't forget this advice akhdemo mlih fl s5 psq vraiment facile bah jibo 13 14 15 i swear it's so easy even if u are not a really hard worker w s5 twin f fih  psq fl s6 tkoun bzf la pression maa l pfe hka tkounou chewiya mriyhin psq rakoum damenin une bonne moyenne fl s5</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Commencer à écrire le mémoire en parallèle de la pratique ne laisse pas tout à la dernière minute. Essaye aussi de gérer ton temps entre le PFE et les autres modules. Essaie de faire la base en JavaScript avant de commencer L3 </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Taba3 brk kolach sahel w  الخير في ما اختاره الله </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Give it all tel3o s5 le max u will need it later </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Ebda pfe bekri et kemlou 9bel les test heka me te7selch kima certains</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Diro isil</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Abranchi sah psk c vraiment interessant surtt li yhebo ybranchiw kter lel informatique des entreprises w kifeh tdkhol l’informatique f l’entreprise </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Bon courage</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Ekhdmo fl s5  w  les notes 3la hssab prof mnlkher meme troh si </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Spécialité facile mais s6 un peu chargé par rapport l s5 de préférence a9rw bien l s5 </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Choisissez selon vos ambitions et selon ce que vous voulez faire et non pas selon ce que les autres disent parceque au final peu importe le choix que vous allez prendre le travail acharné paye toujours quelque soit la spécialité </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>9esem w9tk and don't be lazy . Les projets ghir y3tolk ebda fihom o mt5lichhmch yzido 3lik </p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Makalah t kamel master psa perte de temps حرفيا</p>
+</div>
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>diro isil matndmouch o pfe diroh interne ida les entreprises ma9na3komch dep info ta3hom </p>
+</div>
+
+<div class="paragraph">
+    <div class="student-info">
+        <img src="etudiant.jpg" alt="Etudiant L3 ISIL">
+        <h3>Étudiant L3 ISIL</h3>
+    </div>
+    <p>Bon l conseil  li ndmholkoum mb 9albi    en tanq ana 9rit L3 w kan 3ndi les datte L2  w ditt 11 f les deux S f L3 de 1  a9raww w enjoyy chgol machi t9ra bachh tl3 brk meme afhem l module pcq koul module meme ybanlk m3ndo hata ma3na wla proff 9r3a bshh yfidkk yfidkk  w ki n9olkk a9ra machii lazem tdkholl kmll les cours w kmll les td bch tl3 a3rf t9raww intiligament  chgol  kyn des module vrais sa7lin  ( asi .ihm ...) mohim. De 2 a9arww programation dokka f siff at3moo autre skills  kima tl3oo site wla apps  mais site de preference  Front end backend 3lachh ?? Pcq rahh ykon 3ndkoumm bzff les projectt ta3 des site web w f w9t 9sirr tsmma bachh ts7louhha 3likoumm at3moo asln hadii rahh tkon aventage likoumm tan bachh ki tdiro memoire ta3 pfe yjikoumm site ya3ni cotè prartique sahel tb9a ghir memoire sahhla tan  w de 3 hwso 3la stge mn doka chofo m3rff mna hwsoo 3lhh ?? Pcq  bladna l ma3rifa tkhbatt w zid n9olkoumm meme entreprise  li tkhdmoo m3aha chofo l encadent  (houwa bnadem li rahh y3wnkoumm  b hadra w ereniontation f khdma ta3 pfe ) li ykhdme  w ymdlkoum mn wa9toi  w surtout  ida chfkoumm ntouma chatrine  w tkhdmo ett yzid y3lmkoum w ntouma ado stgae ka expérience  tchofo kifchh ykhdmoo f les entreprise  ettt  mohimm sayoo bzff de 4 Had conseil tres important   kayn 3ibad y9raww w ykhdmoo en meme temps sois ecomerce wla 3fsa wahdoukhha kima mon cas m n9olkoumm 3fssa mtb3ouxhh li y9olkoumm ahhhh s3ibba w mkchh l wa9tt w 3ndna la chage w la presiin mna mlhikk wlhh  kayn l wa9tt lokna n3rfoo kifchh ngiriwhh chtoi 3lahh 9otlkoumm at3lmou had les skils kima cree les site .. ett bachh tshall 3likoumm ki tkonoi occupè sois b khdma wla 3fsa wahdoukhra wla stge. Mohimm a topcuupwaaa le maxx 3ndkoumm l wa9t  3ndkoum l 'enrgie w m3ndoukoumm drahemm it is time bachh you build your caractere  w tzidoo f agent pouche perso ta3koumm  mohimm L3 meilleure  expérience  lokan t3rfollha mlihhh mohimm hada makann rabi ynajhkoumm kmlll w ywfkoumm f ton carrier  🤲🤲🧠🫀</p>
+</div>
+
+
+
+    </div>
+</div>
+
+</body>
+</html>

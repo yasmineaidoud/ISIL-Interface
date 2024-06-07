@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S5</title>
+    <style>
+        /* Style général */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Style de la barre de navigation */
+        /* Style de la barre de navigation */
+nav {
+    background-color: violet;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 40px); /* Largeur de la page moins 40px de padding */
+    margin: 0 20px; /* Ajout d'un peu d'espace sur les côtés */
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Pour permettre le passage à la ligne des éléments lorsque l'espace est insuffisant */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Augmenter l'espacement entre les liens */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+        /* Style de la photo et du texte */
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile span {
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* Style du titre principal */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px; /* Espacement supplémentaire après la barre de navigation */
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #333;
+            margin-top: 0px;
+            margin-bottom: 0; /* Réinitialiser la marge par défaut */
+        }
+
+        /* Style des diagrammes */
+        .chart-container {
+            margin: 0px;
+            text-align: center;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chart-title {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 5px;
+        font-weight: bold;
+       }
+
+        .bar-chart {
+            width: 100%;
+            height: 100%;
+            max-width: 800px; /* Increase the max-width */
+            max-height: 400px; /* Decrease the height */
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="profile">
+            <img src="yasmine.jpg" alt="Yasmine Aidoud">
+            <span>Yasmine Aidoud</span>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="S5.html">S5</a></li>
+                <li><a href="S6.html">S6</a></li>
+                <li><a href="advice.html">advices</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>L3 ISIL 2023/2024</h1>
+    </header>
+    <div class="chart-container">
+        <div class="chart-title">Washnoh ur favorite(s) module(s) fel s5</div>
+        <canvas id="favoriteModulesChart" class="bar-chart"></canvas>
+    </div>
+    <div class="chart-container">
+        <div class="chart-title">Washnohom les modules li jawek bzef s3ab s5</div>
+        <canvas id="difficultModulesChart" class="bar-chart"></canvas>
+    </div>
+
+    <script>
+        const favoriteModulesData = {
+            labels: [
+                'GL', 'SID', 'PAW',
+                'SAD', 'ASI',
+                'IHM', 'ENVS', 'Aucun'
+            ],
+            datasets: [{
+                label: 'Nombre de votes',
+                data: [30, 13, 14, 32, 25, 20, 5, 1],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const difficultModulesData = {
+            labels: [
+                'GL', 'SID', 'PAW',
+                'SAD', 'ASI',
+                'IHM', 'ENVS'
+            ],
+            datasets: [{
+                label: 'Nombre de votes',
+                data: [35, 4, 14, 11, 6, 11, 2],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const configFavoriteModules = {
+            type: 'bar',
+            data: favoriteModulesData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        const configDifficultModules = {
+            type: 'bar',
+            data: difficultModulesData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        window.onload = function() {
+            const ctxFavorite = document.getElementById('favoriteModulesChart').getContext('2d');
+            const ctxDifficult = document.getElementById('difficultModulesChart').getContext('2d');
+            new Chart(ctxFavorite, configFavoriteModules);
+            new Chart(ctxDifficult, configDifficultModules);
+        };
+    </script>
+</body>
+</html>

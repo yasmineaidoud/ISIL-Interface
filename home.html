@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        /* Style général */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Pour centrer le contenu verticalement */
+        }
+
+        /* Style de la barre de navigation */
+       /* Style de la barre de navigation */
+nav {
+    background-color: violet;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 40px); /* Largeur de la page moins 40px de padding */
+    margin: 0 20px; /* Ajout d'un peu d'espace sur les côtés */
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Pour permettre le passage à la ligne des éléments lorsque l'espace est insuffisant */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px; /* Augmenter l'espacement entre les liens */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+
+        /* Style de la photo et du texte */
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile span {
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* Style du titre principal */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px; /* Espacement supplémentaire après la barre de navigation */
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #333;
+            margin-top: 0px;
+            margin-bottom: 0; /* Réinitialiser la marge par défaut */
+        }
+
+         /* Style pour le diagramme circulaire */
+         #chart-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px; /* Ajout d'un peu d'espace sous le diagramme */
+        }
+
+        /* Style pour les reponses des etudiants */
+
+    
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="profile">
+            <img src="yasmine.jpg" alt="Yasmine Aidoud">
+            <span>Yasmine Aidoud</span>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="S5.html">S5</a></li>
+                <li><a href="S6.html">S6</a></li>
+                <li><a href="advice.html">advices</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>L3 ISIL 2023/2024</h1>
+    </header>
+
+    <!-- Division pour le diagramme circulaire -->
+    <div id="chart-container">
+        <h2>Est-ce que ndemt ki dert ISIL?</h2>
+        <p>58 réponses</p>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+
+    </div>
+</div>
+
+
+
+    <!-- Bibliothèque Chart.js pour dessiner le diagramme circulaire -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Données pour le diagramme circulaire
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['NON', 'OUI'],
+                datasets: [{
+                    label: 'Réponses',
+                    data: [59, 0],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+</html>
