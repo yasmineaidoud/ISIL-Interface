@@ -17,42 +17,53 @@
         }
 
         /* Style de la barre de navigation */
-       /* Style de la barre de navigation */
-nav {
-    background-color: violet;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: calc(100% - 40px); /* Largeur de la page moins 40px de padding */
-    margin: 0 20px; /* Ajout d'un peu d'espace sur les côtés */
-}
+        nav {
+            background-color: violet;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100% - 40px); /* Largeur de la page moins 40px de padding */
+            margin: 0 20px; /* Ajout d'un peu d'espace sur les côtés */
+        }
 
-nav .nav-links {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* Pour permettre le passage à la ligne des éléments lorsque l'espace est insuffisant */
-}
+        nav .nav-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap; /* Pour permettre le passage à la ligne des éléments lorsque l'espace est insuffisant */
+        }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 30px; /* Augmenter l'espacement entre les liens */
-}
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px; /* Augmenter l'espacement entre les liens */
+        }
 
-nav ul li {
-    margin: 0;
-}
+        nav ul li {
+            margin: 0;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1em;
-}
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
 
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
 
         /* Style de la photo et du texte */
         .profile {
@@ -86,21 +97,51 @@ nav ul li a {
         header h1 {
             font-size: 3em;
             color: #333;
-            margin-top: 0px;
+            margin-top: 0;
             margin-bottom: 0; /* Réinitialiser la marge par défaut */
         }
 
-         /* Style pour le diagramme circulaire */
-         #chart-container {
+        /* Style pour le diagramme circulaire */
+        #chart-container {
             text-align: center;
             margin-top: 20px;
             margin-bottom: 20px; /* Ajout d'un peu d'espace sous le diagramme */
         }
 
-        /* Style pour les reponses des etudiants */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: violet;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 0;
+                gap: 0;
+            }
 
-    
+            nav ul li {
+                text-align: center;
+                padding: 10px 0;
+                width: 100%;
+            }
 
+            nav ul li a {
+                font-size: 1.2em;
+                width: 100%;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 769px) {
+            nav ul {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
@@ -110,12 +151,17 @@ nav ul li a {
             <span>Yasmine Aidoud</span>
         </div>
         <div class="nav-links">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul>
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="S5.html">S5</a></li>
                 <li><a href="S6.html">S6</a></li>
-                <li><a href="advice.html">advices</a></li>
+                <li><a href="advice.html">Advices</a></li>
             </ul>
         </div>
     </nav>
@@ -129,11 +175,6 @@ nav ul li a {
         <p>59 réponses</p>
         <canvas id="myChart" width="400" height="400"></canvas>
     </div>
-
-    </div>
-</div>
-
-
 
     <!-- Bibliothèque Chart.js pour dessiner le diagramme circulaire -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -159,6 +200,11 @@ nav ul li a {
                 maintainAspectRatio: false
             }
         });
+
+        function toggleMenu() {
+            var menu = document.querySelector('nav ul');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
     </script>
 </body>
 </html>

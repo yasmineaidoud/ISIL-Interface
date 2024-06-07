@@ -53,6 +53,57 @@ nav ul li a {
     font-size: 1.1em;
 }
 
+/* Hamburger menu icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: violet;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0;
+        gap: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    nav ul {
+        display: flex;
+    }
+}
+
+
 
         /* Style de la photo et du texte */
         .profile {
@@ -156,14 +207,20 @@ nav ul li a {
             <span>Yasmine Aidoud</span>
         </div>
         <div class="nav-links">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul>
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="S5.html">S5</a></li>
                 <li><a href="S6.html">S6</a></li>
-                <li><a href="advice.html">advices</a></li>
+                <li><a href="advice.html">Advices</a></li>
             </ul>
         </div>
+
     </nav>
     <header>
         <h1>L3 ISIL 2023/2024</h1>
@@ -599,6 +656,14 @@ nav ul li a {
 
     </div>
 </div>
+
+
+<script>
+    function toggleMenu() {
+        var menu = document.querySelector('nav ul');
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
 
 </body>
 </html>
