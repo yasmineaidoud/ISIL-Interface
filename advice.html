@@ -712,8 +712,10 @@ nav ul li a {
 
         // Revenir en haut de la page lorsque le bouton est cliqué
         document.getElementById("scrollTopBtn").onclick = function() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
+            window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
         };
 </script>
 
